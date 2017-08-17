@@ -29,4 +29,9 @@ export class CustomersComponent implements OnInit {
     return this.customers;
   }
 
+  public getCustomerDetails(cid:string) {
+    console.error(cid);
+  	this.router.navigate(['/customerdetails', cid]);
+  }
+
 }

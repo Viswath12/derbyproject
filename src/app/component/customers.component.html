@@ -1,9 +1,7 @@
-<p>List of Customers</p>
-<div>
-  <ul class="list-group" *ngFor="let customer of getcustomers()">
-  <li class="list-group-item justify-content-between">
-    {{customer.CustomerName}}
-    <span class="badge badge-default badge-pill">{{customer.CustomerId}}</span>
-  </li>
+<h3>List of Customers</h3>
+<br />
+  <ul *ngFor="let customer of getcustomers()">
+    <li>
+    <button class="btn btn-info" (click)="getCustomerDetails(customer.CustomerId)">{{customer.CustomerName}}</button>
+    </li>
   </ul>
-</div>

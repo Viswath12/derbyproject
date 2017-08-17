@@ -9,17 +9,21 @@ import { AppComponent } from './app.component';
 import { Routes } from '@angular/router';
 import { CustomersComponent } from './component/customers.component';
 import { CustomersService } from './services/CustomersService';
+import { CustomerDetailsService } from './services/CustomerDetailsService';
+import { CustomerdetailsComponent } from './component/customerdetails.component';
 
 const appRoutes: Routes = [
 	{ path: "", component: CustomersComponent },
-	{ path: "customers", component: CustomersComponent },
+  { path: "customers", component: CustomersComponent },
+  { path: "customerdetails/:cid", component: CustomerdetailsComponent },
 	{ path: "**", redirectTo: "/", pathMatch: 'full' }
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomersComponent
+    CustomersComponent,
+    CustomerdetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,7 @@ const appRoutes: Routes = [
 	  HttpModule,
 	  RouterModule.forRoot(appRoutes)
   ],
-  providers: [CustomersService],
+  providers: [CustomersService, CustomerDetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

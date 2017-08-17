@@ -1,0 +1,22 @@
+<h3>Details of customer {{customerDetails.CustomerName}}</h3>
+<ul>
+  <dl>
+    <dt>Id</dt>
+    <dd>{{customerDetails.customerId}}</dd>
+  </dl>
+  <dl>
+    <dt>Name</dt>
+    <dd>{{customerDetails.CustomerName}}</dd>
+  </dl>
+  <dl>
+    <dt>Email</dt>
+    <dd>{{customerDetails.email}}</dd>
+  </dl>
+  <dl>
+    <dt>Phone</dt>
+    <dd>{{customerDetails.phone}}</dd>
+  </dl>
+</ul>
+<h3>
+  <a [routerLink]="['/']">Back</a>
+</h3>
